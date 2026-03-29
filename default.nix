@@ -2,7 +2,7 @@
   pkgs ? import <nixpkgs> { },
 }:
 pkgs.rustPlatform.buildRustPackage (finalAttrs: {
-  pname = "iphotokam";
+  pname = "domainwatch";
   version = "0.1";
   cargoLock.lockFile = ./Cargo.lock;
   src = pkgs.lib.cleanSource ./.;
