@@ -9,4 +9,4 @@ Notifications can also be sent via a Discord webhook, optionally specified throu
 > Check the TOS of the RDAP server for the domain that you are watching.  
 > High volume requests may be against them!
 >
-> I am not responsible for anything that is done with program.
+> I am not responsible for anything that is done with this program.
