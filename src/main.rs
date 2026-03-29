@@ -2,7 +2,6 @@ use std::fs::File;
 use std::{collections::HashMap, env, error::Error, time::Duration};
 
 use rdap::{Domain, RdapClient, RdapRequest};
-// use rdap_client::{Client, parser::Domain};
 use serde::{Deserialize, Serialize};
 use similar::TextDiff;
 use tokio::time::sleep;
@@ -97,15 +96,6 @@ async fn main() -> Result<(), Box<dyn Error>> {
         {
             timestamp = response.events.remove(index).date;
         }
-
-        // forgery test (for science!)
-        // if let Some(expiry) = response
-        //     .events
-        //     .iter_mut()
-        //     .find(|v| v.action == "expiration")
-        // {
-        //     expiry.date = "2027-03-07T00:46:40.211Zz".to_owned();
-        // }
 
         if let Some(before) = config.responses.get(domain)
             && !eq_serializable(&before, &response)?
